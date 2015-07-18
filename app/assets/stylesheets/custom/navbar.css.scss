@@ -1,0 +1,29 @@
+$text-color: white;
+
+.navbar {
+  border: none;
+  border-radius: 0;
+
+  a {
+    color: $text-color;
+  }
+
+  .btn {
+    border-radius: 0px;
+    margin-right: 20px;
+  }
+
+  .nav li a {
+
+    &:hover {
+      background-color: white;
+      color: #0bb0e6;
+    }
+  }
+
+  .navbar-brand {
+    font-family: 'Brush Script MT', Arial;
+    font-size: 36px;
+    color: $text-color;
+  }
+}

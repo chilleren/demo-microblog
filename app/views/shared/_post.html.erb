@@ -1,0 +1,13 @@
+
+  <div class="post">
+      <%= image_tag post.user.profile_pic_url.to_s, class: 'profile-pic profile-pic-sm pull-left' %>
+      <div class="post-container">
+        <p><%= post.content %></p>
+        <div class="text-muted">
+          Posted by <%= link_to post.user.username, user_path(post.user) %> 
+          on <%= Time.at(post.created_at).to_date.to_formatted_s(:long) %>
+          <%= link_to 'Show Comments', post_path(post) %> | 
+          <%= link_to 'Reply', new_post_comment_path(post) %>
+        </div>
+      </div>
+  </div>

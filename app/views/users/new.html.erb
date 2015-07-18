@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h1>sign up</h1>
+
+      <%= form_for @user do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username, class: 'form-control'  %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control'  %>
+
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: 'form-control'  %>
+
+        <br />
+
+        <%= f.submit "Sign up", class: "btn btn-lg btn-primary" %>
+
+      <% end %>
+
+    </div> 
+  </div>
+</div>

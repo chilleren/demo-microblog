@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>new comment</h1>
+      <%= render "shared/post", post: @post %>
+
+      <h2>you're response</h2>
+
+      <%= form_for [@post, @comment] do |f| %>
+        <%= f.text_area :content %>
+        <br />
+
+        <%= f.submit "Comment!", class: "btn btn-lg btn-primary" %>
+
+      <% end %>
+    </div> 
+  </div>
+</div>

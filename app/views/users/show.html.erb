@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+    </div> 
+
+    <div class="col-md-5">
+      <h1>posts</h1>    
+    </div> 
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+
+      <div class="bio">
+        <h1><%= @user.username %></h1>
+
+        <%= image_tag @user.profile_pic_url.to_s, class: 'profile-pic' %>
+        <div class="text-muted">member since <%= Time.at(@user.created_at).to_date.to_formatted_s(:long) %></div>
+        <hr />
+        <p><%= @user.bio %></p>    
+      </div>
+    </div> 
+
+    <div class="col-md-5">
+
+      <% @user.posts.each do |post| %>
+        <%= render "shared/post", post: post %>
+      <% end %>      
+    </div> 
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.post {
+  background: $panel-background-color;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .text-muted {
+    margin-left: 15px;
+  }
+}
+
+.comments {
+  margin-left: 29px;
+}
+
+textarea {
+  width: 100%;
+  height: 140px;
+}
+
+.post-container {
+  margin-left: 60px;
+}
