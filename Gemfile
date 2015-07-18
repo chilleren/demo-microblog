@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 gem 'annotate'
 gem 'bcrypt'
+gem 'rename'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
