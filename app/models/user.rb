@@ -20,10 +20,16 @@ class User < ActiveRecord::Base
   has_many :comments
 
   validates :username, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 4 }, on: :create
+  validates :password, presence: true, length: { minimum: 4 }, allow_nil: true
 
   def default_values
     self.profile_pic_url ||= "profile_pics/profile.png"
+  end
+
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+
+    BCrypt::Password.create(string, cost: cost)
   end
 
 end

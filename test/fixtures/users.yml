@@ -13,10 +13,13 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  username: MyString
-  password_digest: MyString
 
-two:
-  username: MyString
-  password_digest: MyString
+alice: 
+  id: 1
+  username: alice
+  password_digest: <%= User.digest('password') %>
+
+bob: 
+  id: 2
+  username: bob
+  password_digest: <%= User.digest('password') %>
