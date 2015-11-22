@@ -27,7 +27,7 @@ User.all.each do |user|
 
   10.times do
     #random_user = User.find_by(username: usernames.sample)
-    random_content = hipster_ipsum.sample(rand(1..5)).join('. ')
+    random_content = Faker::Lorem.paragraph #hipster_ipsum.sample(rand(1..5)).join('. ')
     content = random_content
     #random_hashtag = hashtags.sample
     #content << ' ' << random_hashtag
@@ -36,7 +36,11 @@ User.all.each do |user|
 
     rand(0..5).times do 
       commentor = User.all.sample()
-      Comment.create({user_id: commentor.id, post_id: post.id, content: hipster_ipsum.sample(rand(1..2)).join('. ')})
+      Comment.create({
+        user_id: commentor.id, 
+        post_id: post.id, 
+        content: Faker::Lorem.paragraph #hipster_ipsum.sample(rand(1..2)).join('. ')
+      })
     end
   end
 end

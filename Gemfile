@@ -4,6 +4,7 @@ gem 'bootstrap-sass'
 gem 'annotate'
 gem 'bcrypt'
 gem 'rename'
+gem 'faker'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

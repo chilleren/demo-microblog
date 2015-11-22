@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      flash[:notice] = "Your post was successfully posted!"
+      flash[:notice] = "Your post was successful!"
       redirect_to root_path
     else
       flash.now[:alert] = "Don't leave your post blank. The world needs to know how you feel!"
